@@ -5,6 +5,7 @@ import { CardStyleInterpolators } from "@react-navigation/stack";
 //custom imports
 import HomeScreen from "../screens/HomeScreen";
 import TimerScreen from "../screens/TimerScreen";
+import OnboardingScreen from "../screens/OnboardingScreen";
 
 const Stack = createStackNavigator();
 
@@ -34,6 +35,15 @@ const MainStack = () => {
           }}
         />
         <Stack.Screen name="Timer" component={TimerScreen} />
+        <Stack.Screen
+          name="Onboarding"
+          component={OnboardingScreen}
+          options={{
+            headerShown: false,
+            cardStyleInterpolator:
+              CardStyleInterpolators.forScaleFromCenterAndroid,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

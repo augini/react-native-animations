@@ -17,10 +17,11 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    width: "60%",
-    height: "8%",
+    width: 200,
+    height: 50,
     borderRadius: 8,
     backgroundColor: appColors.main,
+    marginBottom: 15,
   },
   text: {
     color: "#ffffff",
