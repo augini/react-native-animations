@@ -12,6 +12,7 @@ import AppButton from "../components/AppButton";
 const animations = [
   { navigation: "Timer", title: "Timer transition" },
   { navigation: "Onboarding", title: "Onboarding transition" },
+  { navigation: "StyledComponent", title: "Styled Component" },
 ];
 
 const HomeScreen = ({ navigation }) => {
