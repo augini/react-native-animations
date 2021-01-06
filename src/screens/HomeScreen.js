@@ -13,6 +13,8 @@ const animations = [
   { navigation: "Timer", title: "Timer transition" },
   { navigation: "Onboarding", title: "Onboarding transition" },
   { navigation: "StyledComponent", title: "Styled Component" },
+  { navigation: "Practice", title: "Practice Screen" },
+  { navigation: "Styled", title: "Styled Screen" },
 ];
 
 const HomeScreen = ({ navigation }) => {

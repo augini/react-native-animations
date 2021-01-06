@@ -7,6 +7,8 @@ import HomeScreen from "../screens/HomeScreen";
 import TimerScreen from "../screens/TimerScreen";
 import OnboardingScreen from "../screens/OnboardingScreen";
 import StyledComponentScreen from "../screens/StyledComponent";
+import PracticeScreen from "../screens/PracticeScreen";
+import StyledScreen from "../screens/StyledScreen";
 
 const Stack = createStackNavigator();
 
@@ -48,6 +50,26 @@ const MainStack = () => {
         <Stack.Screen
           name="StyledComponent"
           component={StyledComponentScreen}
+          options={{
+            headerShown: false,
+            cardStyleInterpolator:
+              CardStyleInterpolators.forScaleFromCenterAndroid,
+          }}
+        />
+
+        <Stack.Screen
+          name="Practice"
+          component={PracticeScreen}
+          options={{
+            headerShown: false,
+            cardStyleInterpolator:
+              CardStyleInterpolators.forScaleFromCenterAndroid,
+          }}
+        />
+
+        <Stack.Screen
+          name="Styled"
+          component={StyledScreen}
           options={{
             // headerShown: false,
             cardStyleInterpolator:

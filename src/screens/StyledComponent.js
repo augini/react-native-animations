@@ -3,32 +3,32 @@ import { SafeAreaView, StatusBar } from "react-native";
 import styled from "styled-components";
 import { AntDesign } from "@expo/vector-icons";
 
-export default function StyledComponentScreen() {
+export default function StyledComponentScreen({ navigation }) {
   const recipes = [
     {
       name: "Pad Thai",
       info: "45 min | 2 servings",
-      image: require("./assets/food1.jpg"),
+      image: require("../../assets/food2.jpg"),
     },
     {
       name: "Seared Scallops with Romesco Sauce",
       info: "20 min | 4 servings",
-      image: require("./assets/food2.jpg"),
+      image: require("../../assets/food3.jpg"),
     },
     {
       name: "Grilled Chicken with Lemon Butter",
       info: "60 min | 2 servings",
-      image: require("./assets/food3.jpg"),
+      image: require("../../assets/food4.jpg"),
     },
   ];
 
   return (
     <Container>
       <StatusBar barStyle="light-content" />
-      <RecipeBackground source={require("./assets/main.jpg")}>
+      <RecipeBackground source={require("../../assets/food1.jpg")}>
         <SafeAreaView>
           <MenuBar>
-            <Back>
+            <Back onPress={() => navigation.goBack()}>
               <AntDesign name="arrowleft" size={24} color="#FFF" />
               <Text style={{ marginLeft: 10 }}>Ingredients</Text>
             </Back>
@@ -87,7 +87,6 @@ const Container = styled.View`
 
 const Text = styled.Text`
   color: ${(props) => (props.dark ? "#000" : "#FFF")};
-  font-family: "AvenirNext-Regular";
 
   ${({ title, large, small }) => {
     switch (true) {
@@ -120,14 +119,13 @@ const MenuBar = styled.View`
   padding: 16px;
 `;
 
-const Back = styled.View`
+const Back = styled.TouchableOpacity`
   flex-direction: row;
-  align-items: center;
 `;
 
 const MainRecipe = styled.View`
   padding: 0 32px;
-  margin: 200px 0 32px 0;
+  margin: 140px 0 32px 0;
 `;
 
 const Divider = styled.View`
@@ -146,7 +144,7 @@ const Button = styled.TouchableOpacity`
 `;
 
 const RecipesContainer = styled.View`
-  margin-top: -24px;
+  margin-top: -20px;
   padding: 32px;
   background-color: #fff;
   border-top-left-radius: 24px;
